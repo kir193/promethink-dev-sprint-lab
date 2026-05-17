@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Promethink Dev Test Hybrid Sprint Source - Validation Report</title>
+  <style>
+    body { margin: 0; font-family: Inter, Segoe UI, Arial, sans-serif; background: #f8fafc; color: #0f172a; }
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 32px 24px 64px; }
+    h1, h2, h3 { margin: 0 0 12px; }
+    h1 { font-size: 32px; }
+    .sub { color: #475569; max-width: 900px; }
+    .hero, .card, table { background: #fff; border: 1px solid #cbd5e1; border-radius: 18px; }
+    .hero { padding: 24px; box-shadow: 0 16px 36px rgba(15,23,42,.06); }
+    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 16px; }
+    .pill { background: #eef2ff; padding: 8px 12px; border-radius: 999px; font-size: 13px; display: inline-block; margin: 4px 6px 0 0; }
+    .section { margin-top: 28px; }
+    table { width: 100%; border-collapse: collapse; overflow: hidden; }
+    th, td { padding: 12px; text-align: left; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+    th { background: #e2e8f0; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
+    .good { color: #166534; background: #dcfce7; padding: 4px 10px; border-radius: 999px; font-weight: 700; }
+    .img { width: 100%; margin-top: 14px; border-radius: 18px; border: 1px solid #cbd5e1; background: #fff; }
+    ul { margin: 0; padding-left: 20px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <h1>Promethink Dev Test Hybrid Sprint Source</h1>
+      <p class="sub">Hybrid-first test repo with repo-first source resolution, split-repo fixtures, governance-only snapshots, and trace-separated events.</p>
+      <div>
+        <span class="pill">npm test passed</span>
+        <span class="pill">hybrid repo renamed</span>
+        <span class="pill">split repo fixtures added</span>
+        <span class="pill">report generated</span>
+      </div>
+      <div class="grid">
+        <div class="card" style="padding:14px"><strong>Hybrid</strong><br/>connected</div>
+        <div class="card" style="padding:14px"><strong>Split planning</strong><br/>connected</div>
+        <div class="card" style="padding:14px"><strong>Code-only</strong><br/>separate</div>
+        <div class="card" style="padding:14px"><strong>Governance</strong><br/>status-only</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Validation matrix</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Scenario</th>
+            <th>Expected</th>
+            <th>Evidence</th>
+            <th>Verdict</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+            <tr>
+              <td><strong>Hybrid repo</strong></td>
+              <td>connected from renamed hybrid repo</td>
+              <td>project-sprint-source.sample.json + source-resolver.sample.json</td>
+              <td><span class="good">passed</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>Split repos</strong></td>
+              <td>planning repo connected, code repo separate</td>
+              <td>fixtures/split/* + code source stub</td>
+              <td><span class="good">passed</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>Missing source</strong></td>
+              <td>missing or empty, no fake fallback</td>
+              <td>mock fixtures</td>
+              <td><span class="good">passed</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>Governance-only</strong></td>
+              <td>status only, no sprint list</td>
+              <td>governance-snapshot.sample.json</td>
+              <td><span class="good">passed</span></td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>What was checked</h2>
+      <div class="card" style="padding:16px">
+        <ul>
+          <li>Hybrid source resolves to the renamed repo.</li>
+          <li>Split repo source resolves to planning-meta and not to the code-only repo.</li>
+          <li>Missing source remains missing or empty, not fake.</li>
+          <li>Governance snapshot stays status-only.</li>
+          <li>Trace stays separate from sprint metadata.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Report image</h2>
+      <img class="img" src="./images/hybrid-validation-summary.svg" alt="Hybrid validation summary" />
+    </div>
+  </div>
+</body>
+</html>

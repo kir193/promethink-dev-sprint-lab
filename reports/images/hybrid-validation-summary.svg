@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="320" viewBox="0 0 1180 320">
+  <rect width="1180" height="320" rx="24" fill="#f8fafc"/>
+  <text x="36" y="48" font-size="28" font-weight="800" fill="#0f172a">Hybrid validation summary</text>
+  <g>
+      <rect x="36" y="80" width="1108" height="46" rx="14" fill="#ffffff" stroke="#cbd5e1"/>
+      <text x="56" y="108" font-size="15" font-weight="700" fill="#0f172a">Hybrid repo</text>
+      <text x="300" y="108" font-size="14" fill="#334155">connected from renamed hybrid repo</text>
+      <text x="650" y="108" font-size="14" fill="#334155">project-sprint-source.sample.json + source-resolver.sample.json</text>
+      <text x="1030" y="108" font-size="14" font-weight="700" fill="#166534">passed</text>
+    </g>
+<g>
+      <rect x="36" y="136" width="1108" height="46" rx="14" fill="#eef2ff" stroke="#cbd5e1"/>
+      <text x="56" y="164" font-size="15" font-weight="700" fill="#0f172a">Split repos</text>
+      <text x="300" y="164" font-size="14" fill="#334155">planning repo connected, code repo separate</text>
+      <text x="650" y="164" font-size="14" fill="#334155">fixtures/split/* + code source stub</text>
+      <text x="1030" y="164" font-size="14" font-weight="700" fill="#166534">passed</text>
+    </g>
+<g>
+      <rect x="36" y="192" width="1108" height="46" rx="14" fill="#ffffff" stroke="#cbd5e1"/>
+      <text x="56" y="220" font-size="15" font-weight="700" fill="#0f172a">Missing source</text>
+      <text x="300" y="220" font-size="14" fill="#334155">missing or empty, no fake fallback</text>
+      <text x="650" y="220" font-size="14" fill="#334155">mock fixtures</text>
+      <text x="1030" y="220" font-size="14" font-weight="700" fill="#166534">passed</text>
+    </g>
+<g>
+      <rect x="36" y="248" width="1108" height="46" rx="14" fill="#eef2ff" stroke="#cbd5e1"/>
+      <text x="56" y="276" font-size="15" font-weight="700" fill="#0f172a">Governance-only</text>
+      <text x="300" y="276" font-size="14" fill="#334155">status only, no sprint list</text>
+      <text x="650" y="276" font-size="14" fill="#334155">governance-snapshot.sample.json</text>
+      <text x="1030" y="276" font-size="14" font-weight="700" fill="#166534">passed</text>
+    </g>
+</svg>

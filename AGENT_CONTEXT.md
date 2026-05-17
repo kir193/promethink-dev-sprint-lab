@@ -8,7 +8,7 @@ normalizes it, and then streams trace output separately.
 
 ## What to remember
 
-- read sprint/task data from this repo, not from `governance.snapshot`;
+- read sprint/task data from the target project repo first, using methodology-aligned files in that repo before any fallback;
 - choose the source explicitly and record provenance;
 - use `governance.snapshot` only for status, health, and execution state;
 - keep step stream separate from sprint metadata;

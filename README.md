@@ -12,8 +12,8 @@ hard-coded reader of one repository.
 
 It should:
 
-- discover where project sprint data lives;
-- resolve the source from repo, store, database, Jira, or another provider;
+- start with the target project repository and inspect its sprint/methodology files first;
+- resolve the source from the repository before considering store, database, Jira, or another provider;
 - normalize that source into a project snapshot;
 - keep `governance.snapshot` as status/health only;
 - emit step and trace updates separately from sprint metadata.
@@ -33,7 +33,7 @@ The current draft of that contract lives in
 ## Rules
 
 - The agent chooses the source, not the UI.
-- Project sprint data must come from this repo or a dedicated sprint store.
+- Project sprint data must come from the target project repo first, then a dedicated sprint store if the repo has no usable sprint data.
 - `governance.snapshot` is for health/status and execution state only.
 - Step/event stream stays separate from sprint metadata.
 - Raw reasoning does not belong in the main transcript.

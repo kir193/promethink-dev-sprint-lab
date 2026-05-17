@@ -8,20 +8,35 @@ and normalize the correct source for the project it is working on.
 
 ## Core idea
 
-- `simple-local-agent` can choose the source.
+- `simple-local-agent` should start with the target project repository.
+- It should inspect methodology-aligned files in that repo first.
+- It can then choose a fallback source only if the repo has no usable sprint data.
 - The UI should only consume the normalized output.
 - `governance.snapshot` stays status-only.
 - Sprint/task data must not be borrowed from agent-owned governance history.
 
 ## Source selection order
 
-The resolver may inspect sources in this order:
+The resolver should inspect sources in this order:
 
-1. explicit project source hints
-2. repository-local sprint source
-3. dedicated sprint store
-4. external provider such as Jira or a database
+1. target project repository, starting with methodology-aligned files
+2. dedicated sprint store
+3. external provider such as Jira or a database
+4. plugin source
 5. empty state if no valid source exists
+
+Explicit project source hints are allowed only as input to identify the target
+repository. They are not the data source themselves.
+
+When scanning the repository first, the backend should prefer files such as:
+
+- `README.md`
+- `AGENTS.md`
+- `ROADMAP.md`
+- `SPRINT_INDEX.md`
+- `SPRINTS/`
+- sprint/task markdown files
+- project-specific methodology docs
 
 The resolver should record which provider won and why.
 

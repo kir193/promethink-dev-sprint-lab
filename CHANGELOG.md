@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.3
+
+- Clarified that the target project repository is the first source to inspect.
+- Added methodology-aligned repository scanning guidance before any fallback source.
+- Updated the source resolver contract to treat source hints as inputs, not as the source itself.
+
 ## 0.1.2
 
 - Added a source resolver contract for simple-local-agent style proxy behavior.

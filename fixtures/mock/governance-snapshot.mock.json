@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "generatedAt": "2026-05-17T00:00:00Z",
+  "health": "healthy",
+  "progressLabel": "mock 0/0",
+  "currentMode": "mock",
+  "activeSessionId": "mock-session",
+  "activeExecutionId": "mock-exec",
+  "warnings": [
+    "Mock mode: governance snapshot is status only"
+  ]
+}

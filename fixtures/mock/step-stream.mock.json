@@ -1,0 +1,40 @@
+{
+  "events": [
+    {
+      "type": "session",
+      "sessionId": "mock-session"
+    },
+    {
+      "type": "turn_start",
+      "sessionId": "mock-session",
+      "turnId": "mock-turn"
+    },
+    {
+      "type": "step_start",
+      "stepId": "mock-step-001",
+      "title": "Load mock source"
+    },
+    {
+      "type": "action_result",
+      "stepId": "mock-step-001",
+      "name": "load_mock_source",
+      "ok": true,
+      "summary": "Mock sprint source loaded"
+    },
+    {
+      "type": "step_end",
+      "stepId": "mock-step-001",
+      "status": "done"
+    },
+    {
+      "type": "persisted",
+      "sessionId": "mock-session",
+      "executionId": "mock-exec"
+    },
+    {
+      "type": "done",
+      "sessionId": "mock-session",
+      "summary": "Mock sprint flow complete"
+    }
+  ]
+}

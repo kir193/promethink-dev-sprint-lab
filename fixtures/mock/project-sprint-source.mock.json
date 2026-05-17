@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "sourceState": "missing",
+  "sourceRef": null,
+  "sourceMetadata": {
+    "projectName": "Promethink Sprint Lab Mock",
+    "branch": "local"
+  },
+  "lastSyncedAt": "2026-05-17T00:00:00Z",
+  "activeSprint": null,
+  "sprints": [],
+  "warnings": [
+    "Mock mode: no project sprint source connected"
+  ]
+}

@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1
+
+- Added offline mock fixtures for sprint source, governance status, and step streams.
+- Added a local validator so the repo can be tested without backend changes.
+- Clarified mock/offline validation mode alongside the repo-backed source.
+
 ## 0.1.0
 
 - Created the dedicated sprint lab repository.

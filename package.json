@@ -1,0 +1,10 @@
+{
+  "name": "promethink-dev-sprint-lab",
+  "version": "0.1.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate-sprint-lab.mjs",
+    "test": "npm run validate"
+  }
+}

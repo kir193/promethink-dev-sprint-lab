@@ -1,28 +1,28 @@
-# 10 Second Context
+# 10-секундный контекст
 
-You are working with the Promethink Dev sprint lab repo.
+Вы работаете с репозиторием Promethink Dev sprint lab.
 
-## What matters
+## Что важно
 
-- this repo is the explicit project sprint source;
-- `governance.snapshot` is status only;
-- step stream is separate from sprint metadata;
-- sprint data is structured, not a chat reply;
-- missing source means empty state;
-- trace should be collapsible and readable.
+- этот repo — explicit project sprint source;
+- `governance.snapshot` — только status;
+- step stream отделён от sprint metadata;
+- sprint data — это structured data, а не chat reply;
+- при missing source нужно показывать empty state;
+- trace должен быть collapsible и readable.
 
-## Do not mix
+## Не смешивать
 
-- agent governance batch history
-- project sprint list
-- raw private reasoning
-- shell layout changes
+- agent governance batch history;
+- project sprint list;
+- raw private reasoning;
+- shell layout changes.
 
-## Expected output
+## Ожидаемый результат
 
-- sprint cards
-- task cards
-- source metadata
-- status labels
-- readable step summaries
-- collapsible trace disclosure
+- sprint cards;
+- task cards;
+- source metadata;
+- status labels;
+- readable step summaries;
+- collapsible trace disclosure.

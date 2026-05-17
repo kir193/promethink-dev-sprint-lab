@@ -1,11 +1,11 @@
 # Sprint 01 - Source shape
 
-Goal: define the explicit sprint source and source metadata shape.
+Цель: определить явный sprint source и форму source metadata.
 
-## Output
+## Выход
 
-- sourceType
-- sourceRef
-- sourceMetadata
-- lastSyncedAt
-- empty/stale/missing semantics
+- sourceType;
+- sourceRef;
+- sourceMetadata;
+- lastSyncedAt;
+- semantics для empty / stale / missing.

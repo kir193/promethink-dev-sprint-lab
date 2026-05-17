@@ -1,10 +1,10 @@
-# Sprint 03 - Onboarding fixtures
+# Sprint 03 - Fixtures and onboarding
 
-Goal: add fixtures and a short prompt pack for quick agent onboarding.
+Цель: добавить fixtures и быстрые packs для agent onboarding.
 
-## Output
+## Выход
 
-- 10-second context brief
-- sample sprint source
-- sample governance snapshot
-- sample step stream
+- fixtures;
+- prompt packs;
+- concise agent brief;
+- validation files.

@@ -1,29 +1,30 @@
-# Governance Model
+# Модель governance
 
-`governance.snapshot` in this repository is a status layer, not a project sprint source.
+`governance.snapshot` в этом репозитории — это status layer, а не источник
+project sprint.
 
-It is paired with a separate source-resolver layer that decides where project
-sprint data lives.
+Он связан с отдельным source-resolver layer, который определяет, где живут
+project sprint data.
 
-## Allowed uses
+## Разрешённое использование
 
-- health
-- progress
-- current mode
-- active execution state
-- warnings
-- operational summary
-- provenance for status updates
+- health;
+- progress;
+- current mode;
+- active execution state;
+- warnings;
+- operational summary;
+- provenance для status updates.
 
-## Not allowed
+## Запрещено
 
-- project sprint list
-- sprint task hierarchy
-- roadmap source of truth
-- fallback for missing sprint source
-- project source resolution
+- project sprint list;
+- sprint task hierarchy;
+- roadmap source of truth;
+- fallback для missing sprint source;
+- project source resolution.
 
-## Suggested shape
+## Предлагаемая форма
 
 ```ts
 type GovernanceSnapshot = {
@@ -38,8 +39,8 @@ type GovernanceSnapshot = {
 };
 ```
 
-## UI guidance
+## Подсказка для UI
 
-- `StatusPanel` may read governance health and progress
-- `SprintProtocol` must read project sprint data from an explicit sprint source
-- `MissionBrief` may show trace summaries, but not raw governance batch history
+- `StatusPanel` может читать governance health и progress;
+- `SprintProtocol` должен читать project sprint data только из explicit sprint source;
+- `MissionBrief` может показывать trace summaries, но не raw governance batch history.

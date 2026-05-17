@@ -1,19 +1,19 @@
-# Prompt Packs
+# Пакеты промптов
 
-This folder stores short reusable prompts for the sprint lab.
+Эта папка хранит короткие reusable prompts для sprint lab.
 
-Use them to quickly explain:
+Их используют, чтобы быстро объяснить:
 
-- what this repo is;
-- where sprint data lives;
-- what must not be mixed with governance data;
-- how to keep trace output readable.
+- что это за repo;
+- где лежат sprint data;
+- что нельзя смешивать с governance data;
+- как держать trace output читаемым.
 
-## Files
+## Файлы
 
-- [`10_second_context.md`](./10_second_context.md) - ultra-short agent brief
+- [`10_second_context.md`](./10_second_context.md) — ultra-short agent brief
 
-## Rule
+## Правило
 
-Keep prompts short, reusable, and versioned.
-If the meaning changes, add a new file instead of rewriting history.
+Промпты должны быть короткими, reusable и versioned.
+Если смысл меняется, добавляйте новый файл, а не переписывайте историю.

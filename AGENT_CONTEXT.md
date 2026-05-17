@@ -1,34 +1,35 @@
-# Agent Context
+# Контекст агента
 
-You are working with the Promethink Dev sprint lab repository.
+Вы работаете с репозиторием Promethink Dev Sprint Lab.
 
-Use this repo as the explicit project sprint source.
-Treat `simple-local-agent` as a resolver/proxy brain that chooses a source,
-normalizes it, and then streams trace output separately.
+Используйте этот repo как явный source для project sprint data.
+Рассматривайте `simple-local-agent` как resolver/proxy brain, который
+выбирает source, нормализует его и затем отдельно стримит trace output.
 
-## What to remember
+## Что помнить
 
-- read sprint/task data from the target project repo first, using methodology-aligned files in that repo before any fallback;
-- choose the source explicitly and record provenance;
-- use `governance.snapshot` only for status, health, and execution state;
-- keep step stream separate from sprint metadata;
-- keep trace readable and collapsible;
-- keep raw reasoning out of the main transcript;
-- if source is missing, show empty state instead of borrowing unrelated batch data.
+- читать sprint/task data сначала из target project repo, используя
+  methodology-aligned files в этом repo перед любым fallback;
+- явно выбирать source и записывать provenance;
+- использовать `governance.snapshot` только для status, health и execution state;
+- держать step stream отдельно от sprint metadata;
+- держать trace читаемым и collapsible;
+- не выводить raw reasoning в main transcript;
+- если source отсутствует, показывать empty state вместо подстановки чужих batch data.
 
-## Expected output shape
+## Ожидаемая форма вывода
 
-- sprint cards
-- task cards
-- source metadata
-- source resolver provenance
-- progress labels
-- readable step summaries
-- collapsible trace disclosure
+- sprint cards;
+- task cards;
+- source metadata;
+- source resolver provenance;
+- progress labels;
+- readable step summaries;
+- collapsible trace disclosure.
 
-## Do not mix
+## Не смешивать
 
-- agent governance batch history
-- project sprint list
-- backend runtime internals
-- shell layout changes
+- agent governance batch history;
+- project sprint list;
+- backend runtime internals;
+- shell layout changes.

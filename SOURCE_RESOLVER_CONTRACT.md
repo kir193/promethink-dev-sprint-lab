@@ -1,34 +1,35 @@
-# Source Resolver Contract
+# Контракт Source Resolver
 
-This document defines how `simple-local-agent` should act as a source
-resolver/proxy brain for project sprint data.
+Этот документ определяет, как `simple-local-agent` должен вести себя как
+source resolver / proxy brain для project sprint data.
 
-The goal is not to hard-code one source. The goal is to let the agent discover
-and normalize the correct source for the project it is working on.
+Цель не в том, чтобы жёстко привязать его к одному источнику. Цель в том,
+чтобы агент мог находить и нормализовать правильный source для проекта, над
+которым он работает.
 
-## Core idea
+## Основная идея
 
-- `simple-local-agent` should start with the target project repository.
-- It should inspect methodology-aligned files in that repo first.
-- It can then choose a fallback source only if the repo has no usable sprint data.
-- The UI should only consume the normalized output.
-- `governance.snapshot` stays status-only.
-- Sprint/task data must not be borrowed from agent-owned governance history.
+- `simple-local-agent` должен начинать с target project repository;
+- он должен сначала смотреть методологически оформленные файлы в этом repo;
+- fallback source можно выбирать только если в repo нет usable sprint data;
+- UI должен потреблять только нормализованный результат;
+- `governance.snapshot` остаётся только status-only;
+- sprint/task data нельзя брать из agent-owned governance history.
 
-## Source selection order
+## Порядок выбора source
 
-The resolver should inspect sources in this order:
+Resolver должен проверять sources в таком порядке:
 
-1. target project repository, starting with methodology-aligned files
-2. dedicated sprint store
-3. external provider such as Jira or a database
-4. plugin source
-5. empty state if no valid source exists
+1. target project repository, начиная с методологически оформленных файлов;
+2. dedicated sprint store;
+3. внешние провайдеры, такие как Jira или database;
+4. plugin source;
+5. empty state, если нет валидного source.
 
-Explicit project source hints are allowed only as input to identify the target
-repository. They are not the data source themselves.
+Explicit project source hints используются только для идентификации target
+repository. Они не являются source сами по себе.
 
-When scanning the repository first, the backend should prefer files such as:
+При сканировании repo сначала backend должен предпочитать такие файлы:
 
 - `README.md`
 - `AGENTS.md`
@@ -38,9 +39,9 @@ When scanning the repository first, the backend should prefer files such as:
 - sprint/task markdown files
 - project-specific methodology docs
 
-The resolver should record which provider won and why.
+Resolver должен записывать, какой provider победил и почему.
 
-## Contract shape
+## Контрактная форма
 
 ```ts
 type SourceResolverSnapshot = {
@@ -82,15 +83,15 @@ type SourceResolverSnapshot = {
 };
 ```
 
-## UI consumption rules
+## Правила потребления UI
 
-- `SprintProtocol` reads `sprintSource`
-- `StatusPanel` reads `governanceSnapshot`
-- `MissionBrief` reads transcript and trace summaries
-- raw reasoning does not render as a dump
-- empty state is valid and must not be replaced with unrelated sprint data
+- `SprintProtocol` читает `sprintSource`;
+- `StatusPanel` читает `governanceSnapshot`;
+- `MissionBrief` читает transcript и trace summaries;
+- raw reasoning не рендерится как dump;
+- empty state валиден и не должен заменяться чужими sprint data.
 
-## Proposal status
+## Статус предложения
 
-This contract is documented here first, then it can be proposed to the API
-repo once the shape is stable.
+Этот контракт сначала документируется здесь, а потом может быть предложен в
+API repo, когда форма стабилизируется.

@@ -1,13 +1,13 @@
-# Sprints
+# Спринты
 
-This folder stores the canonical sprint/task hierarchy for the sprint lab.
+Эта папка хранит canonical sprint/task hierarchy для sprint lab.
 
-## Format
+## Формат
 
-- each sprint lives in its own folder
-- each sprint folder can include a sprint summary and a task list
-- the data should be readable by both UI and agent onboarding prompts
+- каждый sprint живёт в своей папке;
+- каждая папка sprint может содержать summary sprint'а и список tasks;
+- данные должны быть читаемы и для UI, и для agent onboarding prompts.
 
-## Rule
+## Правило
 
-Do not use governance data as a replacement for these sprint files.
+Не используйте governance data вместо этих sprint files.

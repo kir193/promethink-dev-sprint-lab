@@ -1,9 +1,9 @@
 # Sprint 02 - Governance split
 
-Goal: keep governance as status only and separate it from sprint data.
+Цель: держать governance только как status и отделить его от sprint data.
 
-## Output
+## Выход
 
-- governance snapshot rules
-- status panel mapping
-- trace disclosure rules
+- governance snapshot rules;
+- status panel mapping;
+- trace disclosure rules.

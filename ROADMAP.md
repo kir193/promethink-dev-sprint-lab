@@ -1,46 +1,46 @@
-# Roadmap
+# Дорожная карта
 
-## Purpose
+## Назначение
 
-This repo keeps the project sprint source and trace-friendly read models that
-`simple-local-agent` and the frontend can use without mixing in agent-owned
-governance data.
+Этот репозиторий хранит project sprint source и trace-friendly read models,
+которые могут использовать `simple-local-agent` и frontend без смешивания
+agent-owned governance data.
 
-## Phases
+## Фазы
 
-### Phase 1 - Source shape
+### Фаза 1 - Source shape
 
-- define the sprint/task hierarchy
-- define source metadata
-- define empty/stale/missing semantics
+- определить sprint/task hierarchy;
+- определить source metadata;
+- определить semantics для empty / stale / missing.
 
-### Phase 2 - Governance split
+### Фаза 2 - Governance split
 
-- keep `governance.snapshot` as status only
-- keep project sprint list out of governance
-- document the UI boundary between status and sprint source
+- держать `governance.snapshot` только как status;
+- не использовать governance как project sprint list;
+- описать UI boundary между status и sprint source.
 
-### Phase 3 - Agent onboarding
+### Фаза 3 - Agent onboarding
 
-- provide a 10-second context pack
-- explain where the agent should read sprint data from
-- explain what must not be mixed
+- дать 10-second context pack;
+- объяснить, откуда агент должен читать sprint data;
+- объяснить, что нельзя смешивать.
 
-### Phase 4 - Fixtures
+### Фаза 4 - Fixtures
 
-- keep sample sprint sources
-- keep step stream samples
-- keep governance status samples
+- хранить sample sprint sources;
+- хранить step stream samples;
+- хранить governance status samples.
 
-### Phase 5 - Display compatibility
+### Фаза 5 - Display compatibility
 
-- keep the data shapes compatible with the existing shell
-- support collapsible trace disclosure
-- avoid any shell redesign
+- держать data shapes совместимыми с существующим shell;
+- поддерживать collapsible trace disclosure;
+- избегать redesign shell.
 
-### Phase 6 - Source resolver contract
+### Фаза 6 - Source resolver contract
 
-- describe how the agent resolves a project source
-- keep provenance separate from governance
-- document repo, store, db, and Jira style sources
-- add sample fixtures for connected and empty source states
+- описать, как агент резолвит project source;
+- держать provenance отдельно от governance;
+- документировать repo, store, db и Jira-style sources;
+- добавить sample fixtures для connected и empty source states.

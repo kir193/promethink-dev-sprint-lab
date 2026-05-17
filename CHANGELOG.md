@@ -1,26 +1,26 @@
-# Changelog
+# Журнал изменений
 
 ## 0.1.3
 
-- Clarified that the target project repository is the first source to inspect.
-- Added methodology-aligned repository scanning guidance before any fallback source.
-- Updated the source resolver contract to treat source hints as inputs, not as the source itself.
+- Уточнено, что target project repository — первое место, которое нужно проверять.
+- Добавлены правила сканирования repository-first с опорой на методологически оформленные файлы.
+- Контракт source resolver обновлён так, чтобы source hints считались входом, а не самим source.
 
 ## 0.1.2
 
-- Added a source resolver contract for simple-local-agent style proxy behavior.
-- Added sample resolver fixtures for connected and missing source states.
-- Extended the local validator to cover source resolution, governance split, and mock/offline behavior.
+- Добавлен source resolver contract для поведения simple-local-agent как proxy brain.
+- Добавлены sample resolver fixtures для connected и missing source states.
+- Расширен local validator для проверки source resolution, governance split и mock/offline behavior.
 
 ## 0.1.1
 
-- Added offline mock fixtures for sprint source, governance status, and step streams.
-- Added a local validator so the repo can be tested without backend changes.
-- Clarified mock/offline validation mode alongside the repo-backed source.
+- Добавлены offline mock fixtures для sprint source, governance status и step streams.
+- Добавлен локальный validator, чтобы repo можно было проверять без backend-изменений.
+- Уточнён mock/offline validation mode рядом с repo-backed source.
 
 ## 0.1.0
 
-- Created the dedicated sprint lab repository.
-- Added sprint source, governance model, roadmap, and sprint index.
-- Added a 10-second agent context pack.
-- Added fixtures for sprint source, governance status, and step stream shape.
+- Создан dedicated sprint lab repository.
+- Добавлены sprint source, governance model, roadmap и sprint index.
+- Добавлен 10-second agent context pack.
+- Добавлены fixtures для sprint source, governance status и step stream shape.

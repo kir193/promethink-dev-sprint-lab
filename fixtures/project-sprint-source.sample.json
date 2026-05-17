@@ -1,0 +1,62 @@
+{
+  "ok": true,
+  "sourceType": "repo",
+  "sourceRef": "kir193/promethink-dev-sprint-lab",
+  "sourceMetadata": {
+    "repoName": "promethink-dev-sprint-lab",
+    "branch": "main",
+    "owner": "kir193",
+    "projectName": "Promethink Sprint Lab"
+  },
+  "lastSyncedAt": "2026-05-17T00:00:00Z",
+  "activeSprint": {
+    "id": "S-02",
+    "number": "02",
+    "title": "Governance split",
+    "status": "active"
+  },
+  "sprints": [
+    {
+      "id": "S-01",
+      "number": "01",
+      "title": "Source shape",
+      "description": "Define project sprint source and metadata layout.",
+      "timestampLabel": "done",
+      "status": "done",
+      "tasks": [
+        {
+          "id": "S-01-1",
+          "number": "01.1",
+          "size": "M",
+          "title": "Define sprint/task hierarchy",
+          "status": "done"
+        }
+      ]
+    },
+    {
+      "id": "S-02",
+      "number": "02",
+      "title": "Governance split",
+      "description": "Keep governance as status and separate it from sprint data.",
+      "timestampLabel": "active",
+      "status": "active",
+      "tasks": [
+        {
+          "id": "S-02-1",
+          "number": "02.1",
+          "size": "M",
+          "title": "Define governance snapshot as status-only",
+          "status": "active"
+        },
+        {
+          "id": "S-02-2",
+          "number": "02.2",
+          "size": "S",
+          "title": "Keep project sprint list out of governance",
+          "status": "pending"
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

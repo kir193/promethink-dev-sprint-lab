@@ -1,0 +1,10 @@
+{
+  "ok": true,
+  "generatedAt": "2026-05-17T00:00:00Z",
+  "health": "healthy",
+  "progressLabel": "2/3 tracked",
+  "currentMode": "execution",
+  "activeSessionId": "sess-001",
+  "activeExecutionId": "exec-001",
+  "warnings": []
+}

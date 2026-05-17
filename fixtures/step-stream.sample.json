@@ -1,0 +1,46 @@
+{
+  "events": [
+    {
+      "type": "session",
+      "sessionId": "sess-001"
+    },
+    {
+      "type": "turn_start",
+      "sessionId": "sess-001",
+      "turnId": "turn-001"
+    },
+    {
+      "type": "step_start",
+      "stepId": "step-001",
+      "title": "Read sprint source"
+    },
+    {
+      "type": "action",
+      "stepId": "step-001",
+      "name": "load_sprint_source",
+      "summary": "Load sprint cards from the explicit repo source"
+    },
+    {
+      "type": "action_result",
+      "stepId": "step-001",
+      "name": "load_sprint_source",
+      "ok": true,
+      "summary": "Sprint source loaded"
+    },
+    {
+      "type": "step_end",
+      "stepId": "step-001",
+      "status": "done"
+    },
+    {
+      "type": "persisted",
+      "sessionId": "sess-001",
+      "executionId": "exec-001"
+    },
+    {
+      "type": "done",
+      "sessionId": "sess-001",
+      "summary": "Sprint source hydrated"
+    }
+  ]
+}

@@ -1,19 +1,17 @@
-# Пакеты промптов
+# Prompt Packs
 
-Эта папка хранит короткие reusable prompts для sprint lab.
+This folder stores reusable prompts for source resolution testing.
 
-Их используют, чтобы быстро объяснить:
+## Available prompts
 
-- что это за repo;
-- где лежат sprint data;
-- что нельзя смешивать с governance data;
-- как держать trace output читаемым.
+- `10_second_context.md` - ultra-short agent brief
+- `repo_first_hybrid.md` - hybrid repo source resolution
+- `split_repos.md` - planning-meta repo + code-only repo scenario
+- `missing_source.md` - missing or empty source state
+- `stale_source.md` - stale source state with warnings
+- `governance_only.md` - governance status-only snapshot
+- `trace_only.md` - execution trace only
 
-## Файлы
+## Rule
 
-- [`10_second_context.md`](./10_second_context.md) — ultra-short agent brief
-
-## Правило
-
-Промпты должны быть короткими, reusable и versioned.
-Если смысл меняется, добавляйте новый файл, а не переписывайте историю.
+If the meaning changes, add a new file instead of rewriting history.

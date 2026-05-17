@@ -60,6 +60,7 @@ type SourceResolverSnapshot = {
     externalId?: string;
   };
   sprintSource: {
+    state: 'connected' | 'empty' | 'missing' | 'stale';
     sourceState: 'connected' | 'empty' | 'missing' | 'stale';
     sourceType?: 'repo' | 'store' | 'db' | 'jira' | 'plugin';
     sourceRef: string | null;

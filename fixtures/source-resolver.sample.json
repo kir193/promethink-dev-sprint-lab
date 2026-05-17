@@ -4,18 +4,25 @@
   "projectName": "Promethink Local Clean",
   "resolvedAt": "2026-05-17T00:00:00Z",
   "selectedProvider": "repo",
-  "sourceRef": "kir193/promethink-dev-sprint-lab",
+  "sourceRef": "kir193/promethink-dev-test-hybrid-sprint-source",
+  "source": {
+    "type": "repo",
+    "ref": "kir193/promethink-dev-test-hybrid-sprint-source",
+    "path": ".",
+    "label": "Promethink Dev Test Hybrid Sprint Source"
+  },
   "sourceMetadata": {
     "provider": "repo",
     "owner": "kir193",
-    "repoName": "promethink-dev-sprint-lab",
+    "repoName": "promethink-dev-test-hybrid-sprint-source",
     "branch": "main",
-    "displayName": "Promethink Sprint Lab"
+    "displayName": "Promethink Dev Test Hybrid Sprint Source"
   },
   "sprintSource": {
+    "state": "connected",
     "sourceState": "connected",
     "sourceType": "repo",
-    "sourceRef": "kir193/promethink-dev-sprint-lab",
+    "sourceRef": "kir193/promethink-dev-test-hybrid-sprint-source",
     "lastSyncedAt": "2026-05-17T00:00:00Z",
     "activeSprint": {
       "id": "S-02",

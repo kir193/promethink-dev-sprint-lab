@@ -1,23 +1,26 @@
-# Контекст агента
+# Agent Context
 
-Вы работаете с репозиторием Promethink Dev Sprint Lab.
+This repo is the canonical **test hybrid sprint source** for Promethink Dev source-resolution work.
 
-Используйте этот repo как явный source для project sprint data.
-Рассматривайте `simple-local-agent` как resolver/proxy brain, который
-выбирает source, нормализует его и затем отдельно стримит trace output.
+Use this repo when you need to validate a scenario where:
 
-## Что помнить
+- sprint docs and code live together in one repo;
+- the backend must resolve project sprint data repo-first;
+- `governance.snapshot` stays status-only;
+- step / trace output remains separate from sprint metadata.
 
-- читать sprint/task data сначала из target project repo, используя
-  methodology-aligned files в этом repo перед любым fallback;
-- явно выбирать source и записывать provenance;
-- использовать `governance.snapshot` только для status, health и execution state;
-- держать step stream отдельно от sprint metadata;
-- держать trace читаемым и collapsible;
-- не выводить raw reasoning в main transcript;
-- если source отсутствует, показывать empty state вместо подстановки чужих batch data.
+## Remember
 
-## Ожидаемая форма вывода
+- read sprint/task data first from the target project repo;
+- use source provenance explicitly;
+- never treat `governance.snapshot` as a project sprint list;
+- keep trace separate and collapsible;
+- do not replace missing sprint source with internal backend batch history;
+- when testing split-repo layouts, pair this repo with:
+  - `promethink-dev-test-planning-meta-source`
+  - `promethink-dev-test-code-source`
+
+## Expected output
 
 - sprint cards;
 - task cards;
@@ -26,10 +29,3 @@
 - progress labels;
 - readable step summaries;
 - collapsible trace disclosure.
-
-## Не смешивать
-
-- agent governance batch history;
-- project sprint list;
-- backend runtime internals;
-- shell layout changes.

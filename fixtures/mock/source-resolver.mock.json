@@ -10,6 +10,7 @@
     "displayName": "Mock sprint source"
   },
   "sprintSource": {
+    "state": "missing",
     "sourceState": "missing",
     "sourceType": null,
     "sourceRef": null,

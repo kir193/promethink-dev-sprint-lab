@@ -1,52 +1,36 @@
-# Promethink Dev Sprint Lab — тестовый sprint source
+# Promethink Dev Test Hybrid Sprint Source
 
-Этот репозиторий — dedicated test source of truth для project sprint data,
-task hierarchy и trace-friendly read models.
+Это тестовый репозиторий для сценария, где project sprint data живут вместе с code repo.
 
-Это не runtime backend code и не contract repo.
+## Что здесь есть
 
-## Контракт source resolver
+- roadmap и sprint index;
+- sprint/task markdown;
+- agent context;
+- prompt packs для source resolution;
+- fixtures для project sprint source, governance status и trace;
+- split-repo reminders для planning-meta и code-only test repos.
 
-`simple-local-agent` здесь рассматривается как resolver/proxy brain, а не как
-жёстко привязанный reader одного репозитория.
+## Что здесь не должно быть
 
-Он должен:
+- runtime backend code;
+- frontend code;
+- внутренние governance/backlog docs другого продукта;
+- подмена sprint list через `governance.snapshot`.
 
-- сначала открыть target project repository и посмотреть его sprint/methodology files;
-- выбрать source из repository до любых fallback вариантов;
-- нормализовать этот source в project snapshot;
-- держать `governance.snapshot` только для status/health;
-- отдавать step и trace updates отдельно от sprint metadata.
+## Цель теста
 
-Текущий черновик этого контракта лежит в
-[SOURCE_RESOLVER_CONTRACT.md](SOURCE_RESOLVER_CONTRACT.md).
+- проверить repo-first source resolution;
+- проверить empty / missing / stale states;
+- проверить, что planning repo не склеивается с чужим code repo;
+- проверить, что frontend получает нормализованные данные, а не raw text.
 
-## Что хранится здесь
+## Как это использовать
 
-- project sprint source;
-- sprint/task hierarchy;
-- prompt packs для быстрого agent onboarding;
-- fixtures для display и QA;
-- governance/status read models;
-- mock/offline fixtures для local validation.
-
-## Правила
-
-- Агент выбирает source, а не UI.
-- Project sprint data должны приходить сначала из target project repo, а если
-  там нет usable sprint data — из dedicated sprint store.
-- `governance.snapshot` используется только для health/status и execution state.
-- Step/event stream отделён от sprint metadata.
-- Raw reasoning не относится к main transcript.
-- Если sprint source отсутствует, нужно показать empty state.
-
-## Быстрый старт
-
-1. Открой `AGENT_CONTEXT.md` — это 10-секундный brief для агента.
-2. Открой `SPRINT_INDEX.md` — это инвентарь спринтов.
-3. Открой `ROADMAP.md` — это план batch'а.
-4. Используй файлы в `fixtures/` для UI и QA payloads.
+1. Открой `AGENT_CONTEXT.md`.
+2. Открой `SPRINT_INDEX.md`.
+3. Открой `ROADMAP.md`.
+4. Используй `fixtures/` для source / governance / trace payloads.
 5. Используй `SPRINTS/` как канонический sprint/task source.
-6. Используй `fixtures/mock/` для offline validation и mock mode checks.
-7. Запусти `npm test`, чтобы проверить согласованность repo source, governance
-   model и mock fixtures.
+6. Используй `fixtures/mock/` для offline validation.
+7. Запусти `npm test`.

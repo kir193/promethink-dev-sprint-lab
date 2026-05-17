@@ -1,0 +1,94 @@
+{
+  "ok": true,
+  "projectId": "promethink-dev-test-split-source",
+  "projectName": "Promethink Dev Test Split Source",
+  "resolvedAt": "2026-05-17T00:00:00Z",
+  "selectedProvider": "repo",
+  "sourceRef": "kir193/promethink-dev-test-planning-meta-source",
+  "source": {
+    "type": "repo",
+    "ref": "kir193/promethink-dev-test-planning-meta-source",
+    "path": ".",
+    "label": "Promethink Dev Test Planning Meta Source"
+  },
+  "sourceMetadata": {
+    "provider": "repo",
+    "owner": "kir193",
+    "repoName": "promethink-dev-test-planning-meta-source",
+    "branch": "main",
+    "displayName": "Promethink Dev Test Planning Meta Source"
+  },
+  "sprintSource": {
+    "state": "connected",
+    "sourceState": "connected",
+    "sourceType": "repo",
+    "sourceRef": "kir193/promethink-dev-test-planning-meta-source",
+    "lastSyncedAt": "2026-05-17T00:00:00Z",
+    "activeSprint": {
+      "id": "P-S01",
+      "number": "01",
+      "title": "Planning source shape",
+      "status": "active"
+    },
+    "sprints": [
+      {
+        "id": "P-S01",
+        "number": "01",
+        "title": "Planning source shape",
+        "status": "active",
+        "tasks": [
+          {
+            "id": "P-S01-1",
+            "number": "01.1",
+            "size": "M",
+            "title": "Confirm planning source files",
+            "status": "done"
+          },
+          {
+            "id": "P-S01-2",
+            "number": "01.2",
+            "size": "S",
+            "title": "Keep code repo separate",
+            "status": "active"
+          }
+        ]
+      }
+    ],
+    "warnings": [
+      "Split repo scenario: code lives in a separate repo and must not be merged into sprint source"
+    ]
+  },
+  "governanceSnapshot": {
+    "status": "healthy",
+    "health": "healthy",
+    "progress": {
+      "percent": 50
+    },
+    "progressLabel": "split repo 1/2",
+    "currentMode": "execution",
+    "current_mode": "execution",
+    "execution_state": "running",
+    "activeSessionId": "sess-split-001",
+    "activeExecutionId": "exec-split-001",
+    "warnings": []
+  },
+  "trace": {
+    "events": [
+      {
+        "type": "session",
+        "sessionId": "sess-split-001"
+      },
+      {
+        "type": "turn_start",
+        "sessionId": "sess-split-001",
+        "turnId": "turn-split-001"
+      },
+      {
+        "type": "step_start",
+        "stepId": "step-split-001",
+        "title": "Resolve planning repo"
+      }
+    ]
+  },
+  "warnings": []
+}

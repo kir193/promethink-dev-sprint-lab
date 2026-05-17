@@ -1,0 +1,11 @@
+{
+  "repoType": "code-source",
+  "repoName": "promethink-dev-test-code-source",
+  "repoRef": "kir193/promethink-dev-test-code-source",
+  "hasSprintMetadata": false,
+  "hasRoadmap": false,
+  "hasGovernanceSnapshot": false,
+  "notes": [
+    "This repo is code-only and must never be used as the sprint source."
+  ]
+}

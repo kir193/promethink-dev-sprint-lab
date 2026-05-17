@@ -1,12 +1,19 @@
 {
   "ok": true,
+  "state": "connected",
   "sourceType": "repo",
-  "sourceRef": "kir193/promethink-dev-sprint-lab",
+  "sourceRef": "kir193/promethink-dev-test-hybrid-sprint-source",
+  "source": {
+    "type": "repo",
+    "ref": "kir193/promethink-dev-test-hybrid-sprint-source",
+    "path": ".",
+    "label": "Promethink Dev Test Hybrid Sprint Source"
+  },
   "sourceMetadata": {
-    "repoName": "promethink-dev-sprint-lab",
+    "repoName": "promethink-dev-test-hybrid-sprint-source",
     "branch": "main",
     "owner": "kir193",
-    "projectName": "Promethink Sprint Lab"
+    "projectName": "Promethink Dev Test Hybrid Sprint Source"
   },
   "lastSyncedAt": "2026-05-17T00:00:00Z",
   "activeSprint": {

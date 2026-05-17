@@ -1,9 +1,15 @@
 {
   "ok": true,
   "generatedAt": "2026-05-17T00:00:00Z",
+  "status": "healthy",
   "health": "healthy",
+  "progress": {
+    "percent": 0
+  },
   "progressLabel": "mock 0/0",
   "currentMode": "mock",
+  "current_mode": "mock",
+  "execution_state": "idle",
   "activeSessionId": "mock-session",
   "activeExecutionId": "mock-exec",
   "warnings": [

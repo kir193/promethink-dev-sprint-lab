@@ -1,0 +1,54 @@
+{
+  "ok": true,
+  "state": "connected",
+  "sourceType": "repo",
+  "sourceRef": "kir193/promethink-dev-test-planning-meta-source",
+  "source": {
+    "type": "repo",
+    "ref": "kir193/promethink-dev-test-planning-meta-source",
+    "path": ".",
+    "label": "Promethink Dev Test Planning Meta Source"
+  },
+  "sourceMetadata": {
+    "repoName": "promethink-dev-test-planning-meta-source",
+    "branch": "main",
+    "owner": "kir193",
+    "projectName": "Promethink Dev Test Planning Meta Source"
+  },
+  "lastSyncedAt": "2026-05-17T00:00:00Z",
+  "activeSprint": {
+    "id": "P-S01",
+    "number": "01",
+    "title": "Planning source shape",
+    "status": "active"
+  },
+  "sprints": [
+    {
+      "id": "P-S01",
+      "number": "01",
+      "title": "Planning source shape",
+      "description": "Keep project sprint data in a separate planning repo.",
+      "timestampLabel": "active",
+      "status": "active",
+      "tasks": [
+        {
+          "id": "P-S01-1",
+          "number": "01.1",
+          "size": "M",
+          "title": "Confirm planning source files",
+          "status": "done"
+        },
+        {
+          "id": "P-S01-2",
+          "number": "01.2",
+          "size": "S",
+          "title": "Keep code repo separate",
+          "status": "active"
+        }
+      ]
+    }
+  ],
+  "warnings": [
+    "Split repo scenario: code repo exists separately and is not sprint source"
+  ]
+}

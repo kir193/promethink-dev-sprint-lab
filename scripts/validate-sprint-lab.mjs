@@ -19,9 +19,11 @@ async function main() {
   const source = await readJson('fixtures/project-sprint-source.sample.json');
   const governance = await readJson('fixtures/governance-snapshot.sample.json');
   const trace = await readJson('fixtures/step-stream.sample.json');
+  const resolver = await readJson('fixtures/source-resolver.sample.json');
   const mockSource = await readJson('fixtures/mock/project-sprint-source.mock.json');
   const mockGovernance = await readJson('fixtures/mock/governance-snapshot.mock.json');
   const mockTrace = await readJson('fixtures/mock/step-stream.mock.json');
+  const mockResolver = await readJson('fixtures/mock/source-resolver.mock.json');
 
   assert(source.sourceType === 'repo', 'project sprint source must be repo-backed');
   assert(typeof source.sourceRef === 'string' && source.sourceRef.length > 0, 'project sprint source ref is required');
@@ -40,11 +42,23 @@ async function main() {
     assert(eventTypes.has(type), `step stream must include ${type}`);
   }
 
+  assert(resolver.ok === true, 'source resolver snapshot must be ok');
+  assert(typeof resolver.projectId === 'string' && resolver.projectId.length > 0, 'source resolver projectId is required');
+  assert(typeof resolver.resolvedAt === 'string' && resolver.resolvedAt.length > 0, 'source resolver resolvedAt is required');
+  assert(resolver.selectedProvider === 'repo', 'source resolver must select repo in the sample');
+  assert(resolver.sprintSource?.sourceState === 'connected', 'source resolver sprint source must be connected');
+  assert(Array.isArray(resolver.sprintSource?.sprints) && resolver.sprintSource.sprints.length > 0, 'source resolver sprint source must include sprints');
+  assert(resolver.governanceSnapshot && !('sprints' in resolver.governanceSnapshot), 'source resolver governance snapshot must be status-only');
+  assert(Array.isArray(resolver.trace?.events) && resolver.trace.events.length > 0, 'source resolver trace must include events');
+
   assert(mockSource.sourceState === 'missing' || mockSource.sourceState === 'empty', 'mock source must represent empty or missing state');
   assert(Array.isArray(mockSource.warnings), 'mock source warnings must be present');
   assert(typeof mockGovernance.health === 'string', 'mock governance health is required');
   assert(typeof mockGovernance.progressLabel === 'string', 'mock governance progress label is required');
   assert(Array.isArray(mockTrace.events) && mockTrace.events.length > 0, 'mock trace must include events');
+  assert(mockResolver.selectedProvider === null, 'mock source resolver must not select a provider');
+  assert(mockResolver.sprintSource?.sourceState === 'missing', 'mock source resolver must be missing');
+  assert(Array.isArray(mockResolver.trace?.events) && mockResolver.trace.events.length > 0, 'mock source resolver trace must include events');
 
   for (const sprintPath of ['SPRINTS/S-01/SPRINT.md', 'SPRINTS/S-01/TASKS.md', 'SPRINTS/S-02/SPRINT.md', 'SPRINTS/S-02/TASKS.md', 'SPRINTS/S-03/SPRINT.md', 'SPRINTS/S-03/TASKS.md']) {
     assert(existsSync(join(root, sprintPath)), `missing sprint file: ${sprintPath}`);

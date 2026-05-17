@@ -5,6 +5,22 @@ task hierarchies, and trace-friendly read models.
 
 It is not runtime backend code and it is not the contract repo.
 
+## Source resolver contract
+
+`simple-local-agent` is treated as a resolver/proxy brain, not as a fixed
+hard-coded reader of one repository.
+
+It should:
+
+- discover where project sprint data lives;
+- resolve the source from repo, store, database, Jira, or another provider;
+- normalize that source into a project snapshot;
+- keep `governance.snapshot` as status/health only;
+- emit step and trace updates separately from sprint metadata.
+
+The current draft of that contract lives in
+[SOURCE_RESOLVER_CONTRACT.md](SOURCE_RESOLVER_CONTRACT.md).
+
 ## What lives here
 
 - project sprint source
@@ -16,6 +32,7 @@ It is not runtime backend code and it is not the contract repo.
 
 ## Rules
 
+- The agent chooses the source, not the UI.
 - Project sprint data must come from this repo or a dedicated sprint store.
 - `governance.snapshot` is for health/status and execution state only.
 - Step/event stream stays separate from sprint metadata.

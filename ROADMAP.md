@@ -37,3 +37,10 @@ governance data.
 - keep the data shapes compatible with the existing shell
 - support collapsible trace disclosure
 - avoid any shell redesign
+
+### Phase 6 - Source resolver contract
+
+- describe how the agent resolves a project source
+- keep provenance separate from governance
+- document repo, store, db, and Jira style sources
+- add sample fixtures for connected and empty source states

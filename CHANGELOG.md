@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.2
+
+- Added a source resolver contract for simple-local-agent style proxy behavior.
+- Added sample resolver fixtures for connected and missing source states.
+- Extended the local validator to cover source resolution, governance split, and mock/offline behavior.
+
 ## 0.1.1
 
 - Added offline mock fixtures for sprint source, governance status, and step streams.

@@ -2,6 +2,9 @@
 
 `governance.snapshot` in this repository is a status layer, not a project sprint source.
 
+It is paired with a separate source-resolver layer that decides where project
+sprint data lives.
+
 ## Allowed uses
 
 - health
@@ -10,6 +13,7 @@
 - active execution state
 - warnings
 - operational summary
+- provenance for status updates
 
 ## Not allowed
 
@@ -17,6 +21,7 @@
 - sprint task hierarchy
 - roadmap source of truth
 - fallback for missing sprint source
+- project source resolution
 
 ## Suggested shape
 

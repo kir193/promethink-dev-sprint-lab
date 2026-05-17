@@ -1,0 +1,54 @@
+{
+  "ok": true,
+  "projectId": "promethink-local-clean",
+  "projectName": "Promethink Local Clean",
+  "resolvedAt": "2026-05-17T00:00:00Z",
+  "selectedProvider": null,
+  "sourceRef": null,
+  "sourceMetadata": {
+    "provider": "mock",
+    "displayName": "Mock sprint source"
+  },
+  "sprintSource": {
+    "sourceState": "missing",
+    "sourceType": null,
+    "sourceRef": null,
+    "lastSyncedAt": null,
+    "activeSprint": null,
+    "sprints": [],
+    "warnings": [
+      "Mock mode: no project sprint source connected"
+    ]
+  },
+  "governanceSnapshot": {
+    "health": "healthy",
+    "progressLabel": "mock 0/0",
+    "currentMode": "mock",
+    "activeSessionId": "mock-session",
+    "activeExecutionId": "mock-exec",
+    "warnings": [
+      "Mock mode: governance snapshot is status only"
+    ]
+  },
+  "trace": {
+    "events": [
+      {
+        "type": "session",
+        "sessionId": "mock-session"
+      },
+      {
+        "type": "step_start",
+        "stepId": "mock-step-001",
+        "title": "Empty source"
+      },
+      {
+        "type": "done",
+        "sessionId": "mock-session",
+        "summary": "No sprint source connected"
+      }
+    ]
+  },
+  "warnings": [
+    "Mock mode: source resolver returned empty state"
+  ]
+}

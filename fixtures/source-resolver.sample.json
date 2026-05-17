@@ -1,0 +1,72 @@
+{
+  "ok": true,
+  "projectId": "promethink-local-clean",
+  "projectName": "Promethink Local Clean",
+  "resolvedAt": "2026-05-17T00:00:00Z",
+  "selectedProvider": "repo",
+  "sourceRef": "kir193/promethink-dev-sprint-lab",
+  "sourceMetadata": {
+    "provider": "repo",
+    "owner": "kir193",
+    "repoName": "promethink-dev-sprint-lab",
+    "branch": "main",
+    "displayName": "Promethink Sprint Lab"
+  },
+  "sprintSource": {
+    "sourceState": "connected",
+    "sourceType": "repo",
+    "sourceRef": "kir193/promethink-dev-sprint-lab",
+    "lastSyncedAt": "2026-05-17T00:00:00Z",
+    "activeSprint": {
+      "id": "S-02",
+      "number": "02",
+      "title": "Governance split",
+      "status": "active"
+    },
+    "sprints": [
+      {
+        "id": "S-01",
+        "number": "01",
+        "title": "Source shape",
+        "status": "done",
+        "tasks": [
+          {
+            "id": "S-01-1",
+            "number": "01.1",
+            "size": "M",
+            "title": "Define sprint/task hierarchy",
+            "status": "done"
+          }
+        ]
+      }
+    ],
+    "warnings": []
+  },
+  "governanceSnapshot": {
+    "health": "healthy",
+    "progressLabel": "2/3 tracked",
+    "currentMode": "execution",
+    "activeSessionId": "sess-001",
+    "activeExecutionId": "exec-001",
+    "warnings": []
+  },
+  "trace": {
+    "events": [
+      {
+        "type": "session",
+        "sessionId": "sess-001"
+      },
+      {
+        "type": "turn_start",
+        "sessionId": "sess-001",
+        "turnId": "turn-001"
+      },
+      {
+        "type": "step_start",
+        "stepId": "step-001",
+        "title": "Load sprint source"
+      }
+    ]
+  },
+  "warnings": []
+}

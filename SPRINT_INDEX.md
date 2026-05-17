@@ -11,12 +11,14 @@
 - `S-01` - define sprint source shape and source metadata
 - `S-02` - define governance/status separation and trace rules
 - `S-03` - add fixtures and quick agent onboarding packs
+- `S-04` - define the source resolver contract and provenance model
 
 ## Current status
 
 - `S-01` - planned
 - `S-02` - planned
 - `S-03` - planned
+- `S-04` - planned
 
 ## Source rules
 
